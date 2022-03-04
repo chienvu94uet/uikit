@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detect your location</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button class="detect-button">Detect your location</button>
+    <script>
+        var detectButton = document.querySelector('.detect-button');
+        detectButton.onclick = () => {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(onSuccess, onFail);
+            } else {
+                detectButton.innerText = 'Your Browser not support location'
+            }
+        }
+
+        function onSuccess({
+            coords
+        }) {
+            let {
+                latitude,
+                longitude
+            } = coords;
+            const api_key = "b2f9ae03cfac46a6a8d564bee341fb01";
+            var api_url = 'https://api.opencagedata.com/geocode/v1/json'
+            detectButton.innerText = 'Detecting your location...'
+            var request_url = api_url +
+                '?' +
+                'key=' + api_key +
+                '&q=' + encodeURIComponent(latitude + ',' + longitude) +
+                '&pretty=1' +
+                '&no_annotations=1';
+            fetch(request_url).then(data => data.json()).then(result => {
+                let allDetails = result.results[0].components;
+                let {
+                    country,
+                    city
+                } = allDetails;
+                detectButton.innerText = `Your location is ${city}, ${country}`
+            })
+
+        }
+
+        function onFail() {
+            detectButton.innerText = 'You denie get location';
+            detectButton.setAttribute('disabled', true);
+        }
+    </script>
+</body>
+
+</html>
