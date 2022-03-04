@@ -10,6 +10,7 @@ function removeTag(element, tag) {
     let index = tags.indexOf(tag);
     tags = [...tags.slice(0, index), ...tags.slice(index + 1)];
     element.parentElement.remove();
+    remainTag.innerText = maxTag - tags.length;
     input.focus();
 }
 
