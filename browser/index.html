@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detect browser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2>Brower is: </h2>
+        <div class="browser-lists">
+            <img src="images/chrome.png" alt="" id="chrome">
+            <img src="images/edge.png" alt="" id="edge">
+            <img src="images/firefox.png" alt="" id="firefox">
+            <img src="images/safari.png" alt="" id="safari">
+            <img src="images/opera.png" alt="" id="opera">
+        </div>
+    </div>
+    <script>
+        let {
+            userAgent
+        } = navigator;
+        let browser;
+        if (userAgent.match(/edge/i)) {
+            browser = 'edge'
+        } else if (userAgent.match(/firefox|fxios/i)) {
+            browser = 'firefox'
+        } else if (userAgent.match(/chrome|chromium|crios/i)) {
+            browser = 'chrome'
+        } else if (userAgent.match(/safari/i)) {
+            browser = 'safari'
+        } else if (userAgent.match(/opr/i)) {
+            browser = 'opera'
+        }
+
+        document.querySelector(`#${browser}`).style.opacity = 1;
+    </script>
+</body>
+
+</html>
