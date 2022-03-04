@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #7d2ae8;
+}
+
+.show-modal {
+    padding: 8px 16px;
+    margin: 24px;
+    cursor: pointer;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 24px;
+    border-radius: 16px;
+    background-color: #fff;
+    width: 100%;
+    max-width: 380px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal-open {
+    opacity: 1;
+    pointer-events: inherit;
+}
+
+
+.modal :is(.close, .modal-body ul a) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-header header {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ebedf9;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-header header span {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.modal-header header .close {
+    background-color: #f2f3fb;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #878787;
+}
+
+.modal-body {
+    padding: 16px 0;
+}
+
+.modal-body p {
+    font-size: 16px;
+}
+
+.modal-body ul {
+    list-style: none;
+    display: flex;
+    margin: 24px 0;
+    justify-content: space-between;
+}
+
+.modal-body ul a {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.icons li:nth-child(1) a {
+    color: #1877F2;
+    border-color: #b7d4fb;
+}
+
+.icons li:nth-child(1) a:hover {
+    background: #1877F2;
+}
+
+.icons li:nth-child(2) a {
+    color: #46C1F6;
+    border-color: #b6e7fc;
+}
+
+.icons li:nth-child(2) a:hover {
+    background: #46C1F6;
+}
+
+.icons li:nth-child(3) a {
+    color: #e1306c;
+    border-color: #f5bccf;
+}
+
+.icons li:nth-child(3) a:hover {
+    background: #e1306c;
+}
+
+.icons li:nth-child(4) a {
+    color: #25D366;
+    border-color: #bef4d2;
+}
+
+.icons li:nth-child(4) a:hover {
+    background: #25D366;
+}
+
+.icons li a:hover {
+    color: #fff;
+    border-color: transparent;
+}
+
+.input-group {
+    margin: 16px 0;
+    border-radius: 4px;
+    border: 1px solid #e1e1e1;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input-group input {
+    border: 0;
+    outline: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+}
+
+.input-group i {
+    width: 50px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.input-group button {
+    border-radius: 4px;
+    color: #fff;
+    outline: none;
+    border: 2px solid transparent;
+    padding: 4px 8px;
+    margin-right: 4px;
+    background-color: #7d2ae8;
+    cursor: pointer;
+    font-weight: 500;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button class="show-modal">Show Modal</button>
+    <div class="modal">
+        <div class="modal-header">
+            <header>
+                <span>Share Modal</span>
+                <div class="close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </header>
+        </div>
+        <div class="modal-body">
+            <p>Share this link</p>
+            <ul class="icons">
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </li>
+            </ul>
+            <p>Copylink</p>
+            <div class="input-group">
+                <i class="fa-solid fa-link"></i>
+                <input type="text" value="example.com/share-link" class="input">
+                <button class="copy">Copy</button>
+            </div>
+        </div>
+        <div class="modal-footer"></div>
+    </div>
+    <script>
+        var buttonShowModal = document.querySelector('.show-modal');
+        var modal = document.querySelector('.modal');
+        var close = document.querySelector('.close');
+        var input = document.querySelector('.input');
+        var copy = document.querySelector('.copy');
+
+        buttonShowModal.onclick = function () {
+            modal.classList.toggle('modal-open');
+        }
+
+        close.onclick = function () {
+            modal.classList.remove('modal-open');
+        }
+
+        copy.onclick = function () {
+            input.select();
+            if (document.execCommand("copy")) {
+                copy.innerText = 'Copied';
+                setTimeout(() => {
+                    copy.innerText = 'Copy';
+                }, 2000)
+            }
+        }
+    </script>
+</body>
+
+</html>
