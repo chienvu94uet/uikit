@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="top-bar">
+            <i class="fa-solid fa-angle-down"></i>
+            <span>Now Playing</span>
+            <i class="fa-solid fa-ellipsis"></i>
+        </div>
+        <div class="image-area">
+            <img src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/274684445_3312616718969851_3836911170884642914_n.jpg?stp=dst-jpg_p526x395&_nc_cat=1&ccb=1-5&_nc_sid=730e14&_nc_ohc=Gr3KJF_1i2wAX9-_ZlY&_nc_ht=scontent.fhan14-2.fna&oh=00_AT-_cDaPshBsDTWUkazF3VOfq9KjdDdgmgAywYXHEoghfw&oe=6228E60A"
+                alt="">
+        </div>
+        <div class="song-details">
+            <p class="name">Love you like I do</p>
+            <p class="artiest">Adam Levine</p>
+        </div>
+        <div class="progress-area">
+            <div class="progress-bar">
+            </div>
+            <div class="timer">
+                <span class="current">0:20</span>
+                <span class="current">3:40</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <i class="fa-solid fa-repeat" id="repeat"></i>
+            <i class="fa-solid fa-backward-step"></i>
+            <div class="play-pause">
+                <i class="fa-solid fa-play"></i>
+            </div>
+            <i class="fa-solid fa-forward-step"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
