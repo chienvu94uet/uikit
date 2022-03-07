@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Login Form</h1>
+        <form>
+            <div class="input-wrapper email-wrapper">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="text" placeholder="Email Address" class="email">
+                <i class="fa-solid fa-circle-exclamation error"></i>
+            </div>
+            <span class="error hidden">Email address is required</span>
+            <div class="input-wrapper password-wrapper">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Password" class="password">
+                <i class="fa-solid fa-circle-exclamation error"></i>
+            </div>
+            <span class="error hidden">Password is required</span>
+            <a href="" class="forgot">Forgot password?</a>
+            <button id="login" type="submit">Login</button>
+            <p class="footer">Not yet member? <a href="">Sign up now</a></p>
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
