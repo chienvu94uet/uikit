@@ -70,6 +70,7 @@ button {
     position: relative;
     display: flex;
     align-items: center;
+    flex: 1;
 }
 
 .input-wrapper i {
@@ -77,5 +78,4 @@ button {
     top: 50%;
     transform: translateY(-50%);
     left: 16px;
-    flex: 1;
 }
